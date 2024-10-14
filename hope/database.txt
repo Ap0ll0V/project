@@ -1,0 +1,35 @@
+create database carello;
+use carello;
+
+CREATE TABLE utente  (
+    Codice INT PRIMARY KEY AUTO_INCREMENT ,
+    Cognome VARCHAR(30),
+    
+    Email VARCHAR(50),
+    Password VARCHAR(50),
+);
+
+CREATE TABLE KIT (
+    Codice INT PRIMARY KEY,
+    Nome VARCHAR(30),
+    Prezzo float(6,2)
+);
+
+CREATE TABLE Carello (
+    Codice INT PRIMARY KEY AUTO_INCREMENT,
+    Codut INT ,
+    Codkit INT,
+    Quantita INT
+);
+
+INSERT INTO utente ( Nome, Email, Password) VALUES
+(  'prova', 'prova.prova@example.com', 'password');
+
+-- Inserimento dei dati nella tabella "KIT"
+INSERT INTO KIT (Codice, Nome, Prezzo) VALUES
+(1, 'Kit M.P.', 15.99),
+(2, 'Kit I.H.S', 18.99),
+(3, 'Kit M.M', 1000.99);
+
+
+INSERT INTO Carello (Codut, Codkit) VALUES(1,$Cod)

@@ -1,0 +1,102 @@
+#testoScuro{
+	color: #EEEEEE;
+
+}
+#sfondoScuro{
+	background-color:#393E46;
+}
+#testoImp{
+	color: #daa520;
+	font-weight:bold;
+}
+#testoChiaro{
+	color: #00ADB5;
+
+}
+#sfondoChiaro{
+	background-color:#EEEEEE;
+}
+#spazio{
+	background-color:#393E46;
+	padding: 2%;
+}
+#header{
+ margin-right: 8%; 
+}
+body{
+	padding: 1%;
+}
+div{
+	background-color: #393E46;
+}
+hr{
+	color:white;
+}
+footer{
+	background-color: #393E46;
+}
+img{
+	
+	border: 2px solid #daa520; 
+    border-radius: 5px;
+}
+a{
+   	color: #daa520;
+    text-decoration: none; 
+}
+a:hover {text-decoration: underline;}
+a:active {
+   font-weight:bold;
+}
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #D2D2D2; 
+  color: daa520 ;
+}
+#spazio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.immagini {
+    flex-grow: 1;
+    text-align: left;
+
+}
+button{
+	background-color: #EEEEEE;
+	color: #00ADB5;
+}
+.section {
+    display: flex;
+    align-items: center;
+
+}
+
+.image-container {
+    margin-right: 20px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+.login-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    white-space: normal; 
+}
+
+.login-button .logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}

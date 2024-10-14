@@ -1,0 +1,51 @@
+#include <SPI.h>
+#include <Ethernet.h>
+byte mac[]={0x7B,0xF8,0xA9,0xF9,0x20,0x0A};
+IPAddress ip (10, 0, 10,110)
+EthernetServer servo(80);
+void setup()
+{
+  Serial.begin(9600);
+  Ethernet.begin(mac,ip);
+  servo.begin();
+}
+
+void loop()
+{
+  EthernetCilent client= servo.available();
+  if(client){
+    boolean vuota=true;
+    string line= String();
+    while(client.connected){
+      if(client.available()){
+        char c= client.read();
+        line.concat(c);
+        if((c=='\n')&&vuota){
+          clinet.println("HTTP/1.1 200 OK");
+          clinet.println("Content-Type: text/html");
+          clinet.println("connetion:close");
+          clinet.println("");
+          clinet.println("<!DOCTYPE HTML>");
+          clinet.println("<html>");
+          clinet.println("<html>");
+          clinet.println("<input type="text" id="fname" name="fname"><br>");
+          clinet.println("<input type="button" onclick="alert('dati in viati')" value="invio">");
+          clinet.println("</html>");
+          break;
+        }
+        if(c=='\n'){
+          vouta=true;
+          Serial.println(line);
+          line=String();
+        }
+        else{
+          if(c!='\r'){
+          vouta=false;
+          }
+        }
+      }
+    }
+  }
+  client.stop();
+  Ethernet.maintain();
+}
